@@ -1,0 +1,34 @@
+build
+CMakeLists.txt.user
+.DS_Store
+data/out
+wandb/
+
+# imgui
+*.ini
+
+# clion
+.idea/
+cmake-build-*/
+
+# vscode
+.vscode
+.devcontainer
+
+# clang
+clang
+
+# log
+log
+
+# jobs
+jobs/*.err
+jobs/*.out
+
+# python
+__pycache__
+
+# notebook
+notebook/
+.ipynb_checkpoints
+

@@ -1,0 +1,39 @@
+Meshes of torso change, as well as the first shoulder joints, given that upper limbs are not connected to torso, not to scapulas. All definitions of scapulas and related joints go away too...
+
+
+RB
+	name torso
+	mesh robots/bob/meshes/torso.obj
+	meshTransformation 1 0 0 0	 0 -0.45 -0.028125
+	mesh robots/bob/meshes/lScapula.obj
+	meshTransformation 1 0 0 0	 0 -0.45 -0.028125
+	mesh robots/bob/meshes/rScapula.obj	
+	meshTransformation 1 0 0 0	 0 -0.45 -0.028125
+/End_RB
+
+
+
+RBJoint
+	jointAxis 0 0 1
+	name lShoulder_adduction_abduction
+	parent torso
+	child lUpperArm_tmp1
+	jointCPos 0 0 0
+	jointPPos 0.16875 0.1125 -0.028125
+	jointLimits -0.5 3.0
+	defaultAngle 0.2	
+/End_Joint
+
+RBJoint
+	jointAxis 0 0 1
+	name rShoulder_adduction_abduction
+	parent torso
+	child rUpperArm_tmp1
+	jointCPos 0 0 0
+	jointPPos -0.16875 0.1125 -0.028125
+	jointLimits -3.0 0.5
+	defaultAngle -0.2	
+/End_Joint
+
+
+

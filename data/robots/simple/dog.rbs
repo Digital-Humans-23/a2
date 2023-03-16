@@ -1,0 +1,260 @@
+
+RB
+	name base
+	mass 13.733
+	moi 0.250684593 0.254469458 0.073348887 -7.5402e-05 0.00030338 0.001918218
+	collisionSphere  0.080000  0.08500  0.280000 0.01
+	collisionSphere -0.080000  0.08500  0.280000 0.01
+	collisionSphere  0.080000  0.08500 -0.280000 0.01
+	collisionSphere -0.080000  0.08500 -0.280000 0.01
+/End_RB
+
+
+RB
+	name hip_0
+	mass 1.096000
+	moi 0.000983196 0.000864753 0.000822113 2.811e-06 -4.982e-06 -3.672e-05
+	collisionSphere 0.110000  0.000000 -0.000000 0.01
+/End_RB
+
+
+RB
+	name hip_1
+	mass 1.096000
+	moi 0.000983196 0.000864753 0.000822113 2.811e-06 4.982e-06 3.672e-05
+	collisionSphere 0.110000  0.000000 -0.000000 0.01
+/End_RB
+
+
+RB
+	name hip_2
+	mass 1.096000
+	moi 0.000983196 0.000864753 0.000822113 -2.811e-06 4.982e-06 -3.672e-05
+	collisionSphere -0.110000  0.000000 -0.000000 0.01
+/End_RB
+
+
+RB
+	name hip_3
+	mass 1.096000
+	moi 0.000983196 0.000864753 0.000822113 -2.811e-06 -4.982e-06 3.672e-05
+	collisionSphere -0.110000  0.000000 -0.000000 0.01
+/End_RB
+
+
+RB
+	name thigh_0
+	mass 1.528000
+	moi 0.009280083 0.00178256 0.00991611 -8.511e-05 1.0388e-05 0.000250428
+	collisionSphere  -0.040000  -0.2250000 -0.030000 0.01
+	collisionSphere  0.000000  -0.2250000 -0.030000 0.01
+/End_RB
+
+
+RB
+	name thigh_1
+	mass 1.528000
+	moi 0.009280083 0.00178256 0.00991611 -8.511e-05 1.0388e-05 0.000250428
+	collisionSphere  -0.040000  -0.2250000 -0.030000 0.01
+    collisionSphere  0.000000  -0.2250000 -0.030000 0.01
+/End_RB
+
+
+RB
+	name thigh_2
+	mass 1.528000
+	moi 0.009280083 0.00178256 0.00991611 8.511e-05 -1.0388e-05 0.000250428
+    collisionSphere  0.040000  -0.2250000 -0.030000 0.01
+    collisionSphere  0.000000  -0.2250000 -0.030000 0.01
+/End_RB
+
+
+RB
+	name thigh_3
+	mass 1.528000
+	moi 0.009280083 0.00178256 0.00991611 8.511e-05 -1.0388e-05 0.000250428
+    collisionSphere  0.040000  -0.2250000 -0.030000 0.01
+    collisionSphere  0.000000  -0.2250000 -0.030000 0.01
+/End_RB
+
+
+RB
+	name tibia_0
+	mass 0.241000
+	moi 0.006196546 3.4774e-05 0.006181961 5.138e-06 2.37e-07 -2.985e-06
+	collisionSphere  0.000000 -0.150000  0.000000 0.01
+	endEffector 	0.000000 -0.150000 0.000000 0.001
+/End_RB
+
+
+RB
+	name tibia_1
+	mass 0.241000
+	moi 0.006196546 3.4774e-05 0.006181961 5.138e-06 2.37e-07 -2.985e-06
+	collisionSphere  0.000000 -0.150000  0.000000 0.01
+	endEffector 	0.000000 -0.150000 0.000000 0.001
+/End_RB
+
+
+RB
+	name tibia_2
+	mass 0.241000
+	moi 0.006196546 3.4774e-05 0.006181961 5.138e-06 2.37e-07 -2.985e-06
+	collisionSphere  0.000000 -0.150000  0.000000 0.01
+	endEffector 	0.000000 -0.150000 0.000000 0.001
+/End_RB
+
+
+RB
+	name tibia_3
+	mass 0.241000
+	moi 0.006196546 3.4774e-05 0.006181961 5.138e-06 2.37e-07 -2.985e-06
+	collisionSphere  0.000000 -0.150000  0.000000 0.01
+	endEffector 	0.000000 -0.150000 0.000000 0.001
+/End_RB
+
+
+	RBJoint
+		jointAxis 0.000000 0.000000 1.000000
+		defaultAngle 0.000000
+		jointLimits -0.7 0.7
+		name base_hip_0
+		parent base
+		child hip_0
+		jointCPos 0.008134 -0.000864 0.001568
+		jointPPos 0.087541 -0.025165 0.217066
+	/End_Joint
+
+
+	RBJoint
+		jointAxis 0.000000 0.000000 1.000000
+		defaultAngle 0.000000
+		jointLimits -0.7 0.7
+		name base_hip_1
+		parent base
+		child hip_1
+		jointCPos 0.008134 -0.000864 -0.001568
+		jointPPos 0.087541 -0.025165 -0.221634
+	/End_Joint
+
+
+	RBJoint
+		jointAxis 0.000000 0.000000 1.000000
+		defaultAngle 0.000000
+		jointLimits -0.7 0.7
+		name base_hip_2
+		parent base
+		child hip_2
+		jointCPos -0.008134 -0.000864 0.001568
+		jointPPos -0.087459 -0.025165 0.217066
+	/End_Joint
+
+
+	RBJoint
+		jointAxis 0.000000 0.000000 1.000000
+		defaultAngle 0.000000
+		jointLimits -0.7 0.7
+		name base_hip_3
+		parent base
+		child hip_3
+		jointCPos -0.008134 -0.000864 -0.001568
+		jointPPos -0.087459 -0.025165 -0.221634
+	/End_Joint
+
+
+	RBJoint
+		jointAxis -1.000000 0.000000 0.000000
+		defaultAngle -0.7
+		jointLimits -1.5 1.5
+		name hip_0_thigh_0
+		parent hip_0
+		child thigh_0
+		jointCPos -0.02001 0.031996 0.000482
+		jointPPos 0.045134 -0.000864 0.001568
+	/End_Joint
+
+
+	RBJoint
+		jointAxis -1.000000 0.000000 0.000000
+		defaultAngle -0.7
+		jointLimits -1.5 1.5
+		name hip_1_thigh_1
+		parent hip_1
+		child thigh_1
+		jointCPos -0.02001 0.031996 0.000482
+		jointPPos 0.045134 -0.000864 -0.001568
+	/End_Joint
+
+
+	RBJoint
+		jointAxis -1.000000 0.000000 0.000000
+		defaultAngle -0.7
+		jointLimits -1.5 1.5
+		name hip_2_thigh_2
+		parent hip_2
+		child thigh_2
+		jointCPos 0.02001 0.031996 0.000482
+		jointPPos -0.045134 -0.000864 0.001568
+	/End_Joint
+
+
+	RBJoint
+		jointAxis -1.000000 0.000000 0.000000
+		defaultAngle -0.7
+		jointLimits -1.5 1.5
+		name hip_3_thigh_3
+		parent hip_3
+		child thigh_3
+		jointCPos 0.02001 0.031996 0.000482
+		jointPPos -0.045134 -0.000864 -0.001568
+	/End_Joint
+
+
+	RBJoint
+		jointAxis -1.000000 0.000000 0.000000
+		defaultAngle 1.4
+		jointLimits 0 2.7
+		name thigh_0_tibia_0
+		parent thigh_0
+		child tibia_0
+		jointCPos 0.000381 0.12338 0.002196
+		jointPPos -0.02001 -0.218004 0.000482
+	/End_Joint
+
+
+	RBJoint
+		jointAxis -1.000000 0.000000 0.000000
+		defaultAngle 1.4
+		jointLimits 0 2.7
+		name thigh_1_tibia_1
+		parent thigh_1
+		child tibia_1
+		jointCPos 0.000381 0.12338 0.002196
+		jointPPos -0.02001 -0.218004 0.000482
+	/End_Joint
+
+
+	RBJoint
+		jointAxis -1.000000 0.000000 0.000000
+		defaultAngle 1.4
+		jointLimits 0 2.7
+		name thigh_2_tibia_2
+		parent thigh_2
+		child tibia_2
+		jointCPos 0.000381 0.12338 0.002196
+		jointPPos 0.02001 -0.218004 0.000482
+	/End_Joint
+
+
+	RBJoint
+		jointAxis -1.000000 0.000000 0.000000
+		defaultAngle 1.4
+		jointLimits 0 2.7
+		name thigh_3_tibia_3
+		parent thigh_3
+		child tibia_3
+		jointCPos 0.000381 0.12338 0.002196
+		jointPPos 0.02001 -0.218004 0.000482
+	/End_Joint
+
+

@@ -1,0 +1,5 @@
+add_subdirectory(gui)
+add_subdirectory(utils)
+add_subdirectory(loco)
+add_subdirectory(pylocobase)
+add_subdirectory(pyloco)

@@ -1,0 +1,54 @@
+{
+  "env_id": "PylocoVanilla-v0",
+  "train_hyp_params": {
+    "learning_rate": 3e-5,
+    "batch_size": 512,
+    "n_epochs": 10,
+    "num_envs": 16,
+    "n_steps": 2048,
+    "vf_coef": 0.5,
+    "time_steps": 20e6,
+    "save_freq": 1e5,
+    "max_episode_steps": 150,
+    "max_evaluation_steps": 500,
+    "seed": 313,
+    "normalize_observation": false,
+    "normalize_reward": false
+  },
+  "environment_params": {
+    "robot_model": "Dog",
+    "control_rate": 60.0,
+    "simulation_rate": 120.0,
+    "motors_kp": 300.0,
+    "motors_kd": 50.0,
+    "max_torque": 50.0,
+    "is_obs_fullstate": false,
+    "use_random_command": false
+  },
+  "reward_params": {
+    "fwd_vel_cmd": 2.0,
+    "weight_velocity": 4.0,
+
+    "weight_torque": 1.0e-4,
+
+    "weight_smoothness1": 5.0e-5,
+    "weight_smoothness2": 1.0e-8,
+    "weight_smoothness": 1.0,
+
+    "weight_early_penalty": 5.0
+  },
+  "model_params": {
+    "log_std_init": -2.0,
+    "activation_fn": "TanH",
+    "network_architecture": {
+      "pi": [
+        256,
+        256
+      ],
+      "vf": [
+        256,
+        256
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+RB
+	name ground
+	collisionPlane 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000
+	frictionCoefficient 0.8
+	restitutionCoefficient 0.0
+	frozen
+/End_RB
