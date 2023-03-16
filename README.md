@@ -85,7 +85,14 @@ please follow the provided instruction [HOWTO](HOWTO.md) to set up the workflow.
 
 ## Exercises
 
-Okay now let's do this step-by-step :)
+Let's start from formulating a RL problem. Our policy $\mathbf{\pi}$ maps observations $\mathbf{o}$ to actions $\mathbf{a}$ i.e. $\mathbf{\pi}(\mathbf{o}) = \mathbf{a}$. Here, **actions of our policy is joint angle targets** we send to our characters. This target is sent to PD controller (which is already implemented in our simulator) of the characters and converted into torque command (TMI: technically this is much complicated than that, but for now, you can just consider we have PD controller which converts joint angle targets into joint torque.)
+
+The quadrupedal character has 12 joints, and humanoid character has 43 joints, and we normalize the joint angle target into the range of 
+ where -1 is map to minimum joint angle and +1 is map to maximum joint angle.
+
+The way we define the observations is slightly more complicated, but you can consider the observation of the RL agent is defined as a concatenated vector of generalized coordinates and generalized velocity of the characters excepting (x, z) coordinates of the base position and the yaw angle of base orientation. (Quick Quiz: can you guess why we except (x, z) and yaw angle of base orientation from the observation? Please feel free to leave your idea on [issue](https://github.com/Digital-Humans-23/a2/issues/1) and discuss with your colleagues.)
+
+Then now, it's time to define a reward function. Let's start with it!
 
 ### Ex.1 Quadratic Dog
 
