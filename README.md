@@ -212,7 +212,7 @@ exploration?
 The total reward is composed of:
 
 - Forward velocity reward `forward_vel_reward`: $w_v \text{exp}(- |v_{local,fwd} - v_{cmd}|^2 / (2 \sigma_v^2))$
-- Torque `torque_reward`: $\text{exp}(- w_{\tau}\Vert \mathbf{\tau} \Vert_2^2 / (2 N \sigma_t^2))$
+- Torque `torque_reward`: $w_{\tau} \text{exp}(-\Vert \mathbf{\tau} \Vert_2^2 / (2 N \sigma_t^2))$
 - 1st order smoothness `smoothness1_reward`: $w_{a1}\text{exp}(- \Vert \dot{\mathbf{a}} \Vert_2^2 / (2 N \sigma_{a1}^2))$
 - 2nd order smoothness `smoothness2_reward`: $w_{a2}\text{exp}(- \Vert \ddot{\mathbf{a}} \Vert_2^2 / (2 N \sigma_{a2}^2))$
 
@@ -251,7 +251,7 @@ The total reward is composed of:
 - Forward velocity reward `forward_vel_reward`: $w_v \text{exp}(- |v_{local,fwd} - v_{cmd}|^2 / (2 \sigma_v^2))$
 - base height `height_reward`: $w_h \text{exp}(- |y-y_{nominal}|^2 / (2 \sigma_h^2))$
 - Attitude `attitude_reward`: $w_{rp} \text{exp}(- (|roll|^2 + |pitch|^2) / (4 \sigma_{rp}^2))$
-- Torque `torque_reward`:  $\text{exp}(- w_{\tau}\Vert \mathbf{\tau} \Vert_2^2 / (2 N \sigma_t^2))$
+- Torque `torque_reward`:  $w_{\tau} \text{exp}(- \Vert \mathbf{\tau} \Vert_2^2 / (2 N \sigma_t^2))$
 - 1st order smoothness `smoothness1_reward`: $w_{a1}\text{exp}(- \Vert \dot{\mathbf{a}} \Vert_2^2 / (2 N \sigma_{a1}^2))$
 - 2nd order smoothness `smoothness2_reward`: $w_{a2}\text{exp}(- \Vert \ddot{\mathbf{a}} \Vert_2^2 / (2 N \sigma_{a2}^2))$
 - Joint angle `joint_reward`: $w_{j}\text{exp}(- \Vert \theta-\theta_{default} \Vert_2^2 / (2N\sigma_j^2))$
