@@ -7,7 +7,7 @@
     "num_envs": 16,
     "n_steps": 2048,
     "vf_coef": 0.5,
-    "time_steps": 50e6,
+    "time_steps": 20e6,
     "save_freq": 1e5,
     "max_episode_steps": 200,
     "max_evaluation_steps": 500,
